@@ -17,5 +17,5 @@ OPEN-DUMP READ-DUMP 1 1000 M*/ D.
 
 \EOF 5537376230
 Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
-Найдите первые десять цифр суммы следующих ста 50-значных чисел.
+ГЌГ Г©Г¤ГЁГІГҐ ГЇГҐГ°ГўГ»ГҐ Г¤ГҐГ±ГїГІГј Г¶ГЁГґГ° Г±ГіГ¬Г¬Г» Г±Г«ГҐГ¤ГіГѕГ№ГЁГµ Г±ГІГ  50-Г§Г­Г Г·Г­Г»Гµ Г·ГЁГ±ГҐГ«.
 013.txt
