@@ -13,15 +13,16 @@
       LOOP
       2 PICK U>PAD ROT +
    LOOP NIP ;
+: NEXT  ( adr -- adr' )   DUP C@ 1+ + ;
 : %SEEK  ( # adr len -- #' adr' len | 0 )
    ROT DUP
    IF 1- ROT
       DUP C@ 3 PICK =
       IF DUP 1+ 3 PICK PAD OVER COMPARE
-         IF DUP C@ 1+ + ROT RECURSE
+         IF NEXT ROT RECURSE
          ELSE 2DROP 2DROP 0
          THEN
-      ELSE DUP C@ 1+ + ROT RECURSE
+      ELSE NEXT ROT RECURSE
       THEN
    ELSE ROT ROT
    THEN  ;
