@@ -1,8 +1,8 @@
 ms@ VALUE STOPWATCH
-CREATE PRIMES 2 C, 3 C, 5 C, 7 C, 11 C, 13 C, 17 C, 
+: PRM  CREATE  2 C, 3 C, 5 C, 7 C, 11 C, 13 C, 17 C, DOES> + C@ ;  PRM PRIMES
 : NDS  ( u -- n' )   1 SWAP
-   7 0 DO  PRIMES I + C@ DUP * 3 PICK > IF DROP 2* UNLOOP EXIT THEN
-      1 BEGIN OVER PRIMES I + C@ /MOD SWAP 0=
+   7 0 DO I PRIMES DUP * 3 PICK > IF DROP 2* UNLOOP EXIT THEN
+      1 BEGIN OVER I PRIMES /MOD SWAP 0=
       WHILE ROT DROP SWAP 2+ REPEAT 
       DROP  ROT * SWAP
       DUP 1 = IF DROP UNLOOP EXIT THEN
@@ -22,7 +22,7 @@ For n = 4 there are exactly three distinct solutions:
 What is the least value of n for which the number of distinct solutions exceeds one-thousand?
 NOTE: This problem is an easier version of Problem 110; it is strongly advised that you solve this one first.
 
-Диофантовы обратные I
-В следующем уравнении x, y и n — положительные целые числа.
-При n = 4 существует ровно три различных решения:
-При каком наименьшем значении n число различных решений превышает тысячу?
+Г„ГЁГ®ГґГ Г­ГІГ®ГўГ» Г®ГЎГ°Г ГІГ­Г»ГҐ I
+Г‚ Г±Г«ГҐГ¤ГіГѕГ№ГҐГ¬ ГіГ°Г ГўГ­ГҐГ­ГЁГЁ x, y ГЁ n вЂ” ГЇГ®Г«Г®Г¦ГЁГІГҐГ«ГјГ­Г»ГҐ Г¶ГҐГ«Г»ГҐ Г·ГЁГ±Г«Г .
+ГЏГ°ГЁ n = 4 Г±ГіГ№ГҐГ±ГІГўГіГҐГІ Г°Г®ГўГ­Г® ГІГ°ГЁ Г°Г Г§Г«ГЁГ·Г­Г»Гµ Г°ГҐГёГҐГ­ГЁГї:
+ГЏГ°ГЁ ГЄГ ГЄГ®Г¬ Г­Г ГЁГ¬ГҐГ­ГјГёГҐГ¬ Г§Г­Г Г·ГҐГ­ГЁГЁ n Г·ГЁГ±Г«Г® Г°Г Г§Г«ГЁГ·Г­Г»Гµ Г°ГҐГёГҐГ­ГЁГ© ГЇГ°ГҐГўГ»ГёГ ГҐГІ ГІГ»Г±ГїГ·Гі?
